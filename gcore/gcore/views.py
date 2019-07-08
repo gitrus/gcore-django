@@ -12,6 +12,7 @@ class RepositoryInfoView(APIView):
     """
 
     """
+
     authentication_classes = ()
     permission_classes = ()
 
@@ -34,10 +35,10 @@ class RepositoryInfoView(APIView):
         commit_info = get_repo_head_commit_info(repo_dir)
 
         git_repo_info = {
-            "commit": '',
-            "commit_date": '',
-            "branch": commit_info['branch_name'],
-            "version": '',
+            "commit": "",
+            "commit_date": "",
+            "branch": commit_info["branch_name"],
+            "version": "",
             "started": SERVER_STARTED_TS.isoformat(),  # TODO: add ts to timestamps
             "uptime_seconds": uptime_seconds,
         }
